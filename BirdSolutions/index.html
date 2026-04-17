@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Dalia Serna</title>
+  <meta name="description" content="Tarjeta digital de contacto de Dalia Serna" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: #16335b;
+      background:
+        radial-gradient(circle at top left, rgba(29, 140, 90, 0.08), transparent 30%),
+        radial-gradient(circle at top right, rgba(220, 30, 30, 0.08), transparent 28%),
+        linear-gradient(180deg, #eef2f5 0%, #f9fbfc 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Curvas decorativas estilo imagen */
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::before {
+      bottom: 120px;
+      height: 260px;
+      background:
+        radial-gradient(120% 160px at 50% 100%, rgba(28, 139, 89, 0.20), transparent 60%),
+        radial-gradient(120% 120px at 50% 100%, rgba(255, 255, 255, 0.95), transparent 62%),
+        radial-gradient(120% 90px at 50% 100%, rgba(28, 139, 89, 0.28), transparent 64%);
+    }
+
+    body::after {
+      bottom: -40px;
+      height: 300px;
+      background:
+        radial-gradient(140% 220px at 50% 0%, rgba(16, 117, 68, 0.9), transparent 58%),
+        radial-gradient(140% 170px at 50% 0%, rgba(255, 255, 255, 0.95), transparent 60%),
+        radial-gradient(140% 120px at 50% 0%, rgba(220, 25, 25, 0.88), transparent 62%);
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 450px;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(22, 51, 91, 0.08);
+      border-radius: 28px;
+      padding: 34px 26px;
+      box-shadow: 0 18px 45px rgba(22, 51, 91, 0.12);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #13814f, #1f9d63);
+      color: #ffffff;
+      font-size: 34px;
+      font-weight: bold;
+      border: 4px solid rgba(255,255,255,0.9);
+      box-shadow: 0 8px 22px rgba(19, 129, 79, 0.25);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.1;
+      color: #16335b;
+    }
+
+    .role {
+      margin: 0 0 6px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #13814f;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .company {
+      margin: 0 0 24px;
+      font-size: 15px;
+      color: #d61f1f;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .info {
+      text-align: left;
+      margin: 0 auto 24px;
+      max-width: 340px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(19, 129, 79, 0.10);
+      border-radius: 18px;
+      padding: 16px 18px;
+    }
+
+    .info p {
+      margin: 10px 0;
+      font-size: 15px;
+      line-height: 1.5;
+      word-break: break-word;
+      color: #16335b;
+    }
+
+    .info strong {
+      color: #13814f;
+    }
+
+    .buttons {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      text-decoration: none;
+      text-align: center;
+      padding: 14px 18px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.97;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #13814f, #1f9d63);
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, #d61f1f, #ef3a3a);
+      color: #ffffff;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #16335b;
+      opacity: 0.75;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 28px 18px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .role {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="avatar">DS</div>
+
+    <h1>Dalia Serna</h1>
+    <p class="role">X</p>
+    <p class="company">Opormex</p>
+
+    <section class="info">
+      <p><strong>Tel:</strong> +861 135 8408</p>
+      <p><strong>Email:</strong> gerencia.comunicacion@opormex.org.mx</p>
+      <p><strong>Sitio:</strong> https://opormex.org.mx/</p>
+    </section>
+
+    <div class="buttons">
+      <a class="btn btn-primary" href="DaliaSerna.vcf" download>
+        Guardar contacto
+      </a>
+
+      <a class="btn btn-secondary" href="https://wa.me/528611358408" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+    </div>
+
+    <div class="footer">
+      Tarjeta digital NFC
+    </div>
+  </main>
+</body>
+</html>

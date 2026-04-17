@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto | Dalia Serna</title>
   <meta name="description" content="Tarjeta digital de contacto de Dalia Serna" />
+
   <style>
     * {
       box-sizing: border-box;
@@ -27,7 +28,7 @@
       overflow: hidden;
     }
 
-    /* Curvas decorativas estilo imagen */
+    /* Curvas decorativas */
     body::before,
     body::after {
       content: "";
@@ -61,7 +62,7 @@
       z-index: 1;
       width: 100%;
       max-width: 450px;
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.80);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(22, 51, 91, 0.08);
       border-radius: 28px;
@@ -70,20 +71,22 @@
       text-align: center;
     }
 
+    /* AVATAR CON LOGO */
     .avatar {
       width: 96px;
       height: 96px;
       border-radius: 50%;
       margin: 0 auto 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #13814f, #1f9d63);
-      color: #ffffff;
-      font-size: 34px;
-      font-weight: bold;
+      overflow: hidden;
       border: 4px solid rgba(255,255,255,0.9);
       box-shadow: 0 8px 22px rgba(19, 129, 79, 0.25);
+      background: #ffffff;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     h1 {
@@ -99,7 +102,6 @@
       font-weight: 700;
       color: #13814f;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
 
     .company {
@@ -107,7 +109,6 @@
       font-size: 15px;
       color: #d61f1f;
       font-weight: 700;
-      letter-spacing: 0.5px;
     }
 
     .info {
@@ -135,7 +136,6 @@
     .buttons {
       display: grid;
       gap: 12px;
-      margin-top: 8px;
     }
 
     .btn {
@@ -147,13 +147,12 @@
       border-radius: 16px;
       font-size: 16px;
       font-weight: 700;
-      transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+      transition: transform 0.15s ease, opacity 0.15s ease;
     }
 
     .btn:hover {
       transform: translateY(-1px);
-      opacity: 0.97;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+      opacity: 0.95;
     }
 
     .btn-primary {
@@ -181,16 +180,17 @@
       h1 {
         font-size: 27px;
       }
-
-      .role {
-        font-size: 16px;
-      }
     }
   </style>
 </head>
+
 <body>
   <main class="card">
-    <div class="avatar">DS</div>
+
+    <!-- LOGO AQUÍ -->
+    <div class="avatar">
+      <img src="logo.png" alt="Logo">
+    </div>
 
     <h1>Dalia Serna</h1>
     <p class="role">X</p>
@@ -207,7 +207,7 @@
         Guardar contacto
       </a>
 
-      <a class="btn btn-secondary" href="https://wa.me/528611358408" target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-secondary" href="https://wa.me/528611358408" target="_blank">
         WhatsApp
       </a>
     </div>
@@ -215,6 +215,7 @@
     <div class="footer">
       Tarjeta digital NFC
     </div>
+
   </main>
 </body>
 </html>
